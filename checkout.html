@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Golden Crumb Bakery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-loader">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Warming up the oven...</p>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">🥐</span>
+        Golden Crumb
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="orders.html">My Orders</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-icon theme-toggle" title="Toggle Dark Mode">
+          <span class="icon-moon">🌙</span>
+          <span class="icon-sun">☀️</span>
+        </button>
+        <a href="signin.html" class="btn-icon" title="Sign In">👤</a>
+        <a href="cart.html" class="btn-icon icon-wrap" title="Cart">
+          🛒
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== CHECKOUT PAGE ===================== -->
+  <section class="section" style="padding-top: calc(var(--navbar-height) + var(--space-lg));">
+    <div class="container">
+      <div class="section-heading" style="margin-bottom:2rem;">
+        <span class="eyebrow">Step 2 of 2</span>
+        <h1>Checkout</h1>
+      </div>
+
+      <form id="checkout-form" novalidate>
+        <div class="checkout-layout">
+
+          <!-- LEFT: Customer Details + Payment -->
+          <div>
+            <div class="form-card form-card-wide" style="margin-bottom:1.5rem;">
+              <h3 class="mb-md">Delivery Details</h3>
+
+              <div class="form-group">
+                <label for="checkout-name">Full Name</label>
+                <input type="text" id="checkout-name" placeholder="e.g. Ayesha Raza">
+                <span class="error-message">Full name is required.</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkout-phone">Phone Number</label>
+                  <input type="tel" id="checkout-phone" placeholder="03XXXXXXXXX">
+                  <span class="error-message">Enter a valid phone number.</span>
+                </div>
+                <div class="form-group">
+                  <label for="checkout-email">Email Address</label>
+                  <input type="email" id="checkout-email" placeholder="you@example.com">
+                  <span class="error-message">Enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-address">Delivery Address</label>
+                <textarea id="checkout-address" rows="3" placeholder="House #, Street, Area"></textarea>
+                <span class="error-message">Delivery address is required.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-city">City</label>
+                <input type="text" id="checkout-city" placeholder="e.g. Lahore">
+                <span class="error-message">City is required.</span>
+              </div>
+            </div>
+
+            <div class="form-card form-card-wide">
+              <h3 class="mb-md">Payment Method</h3>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="Cash on Delivery" checked>
+                  <span>💵 Cash on Delivery</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="Credit / Debit Card">
+                  <span>💳 Credit / Debit Card</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="Easypaisa / JazzCash">
+                  <span>📱 Easypaisa / JazzCash</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Order Summary -->
+          <div class="order-summary">
+            <h3 class="mb-md">Order Summary</h3>
+            <div id="checkout-order-items" class="mb-md"></div>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="checkout-subtotal">Rs 0</span>
+            </div>
+            <div class="summary-row">
+              <span>Delivery Charges</span>
+              <span id="checkout-delivery">Rs 0</span>
+            </div>
+            <div class="summary-row total">
+              <span>Grand Total</span>
+              <span id="checkout-total">Rs 0</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full mt-lg">
+              <span class="btn-text">Place Order</span>
+              <span class="btn-spinner"></span>
+            </button>
+            <a href="cart.html" class="btn btn-outline btn-full mt-sm">Back to Cart</a>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">🥐 Golden Crumb</div>
+          <p>Handcrafted cakes, pastries, and breads baked fresh every day using traditional techniques and premium ingredients.</p>
+          <div class="footer-social">
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="Instagram">ig</a>
+            <a href="#" title="Twitter">tw</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>My Account</h4>
+          <ul>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="cart.html">My Cart</a></li>
+            <li><a href="orders.html">My Orders</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>📍 123 Bakery Street, Lahore</li>
+            <li>📞 +92 300 1234567</li>
+            <li>✉️ hello@goldencrumb.com</li>
+            <li>🕐 8:00 AM – 10:00 PM Daily</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Golden Crumb Bakery. All rights reserved. Built with love (and butter).</div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" title="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

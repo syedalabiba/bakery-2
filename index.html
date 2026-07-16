@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Crumb Bakery — Handcrafted Cakes, Breads & Pastries</title>
+  <meta name="description" content="Premium handcrafted cakes, pastries, and breads baked fresh daily. Order online for delivery.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== PAGE LOADER ===================== -->
+  <div class="page-loader">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Warming up the oven...</p>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">🥐</span>
+        Golden Crumb
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="orders.html">My Orders</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-icon theme-toggle" title="Toggle Dark Mode">
+          <span class="icon-moon">🌙</span>
+          <span class="icon-sun">☀️</span>
+        </button>
+        <a href="signin.html" class="btn-icon" title="Sign In">👤</a>
+        <a href="cart.html" class="btn-icon icon-wrap" title="Cart">
+          🛒
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow">Freshly Baked, Daily</span>
+        <h1>Every Bite is a <span class="italic-accent">Little Celebration</span></h1>
+        <p>Handcrafted cakes, buttery pastries, and artisan breads made from scratch every morning with real butter, real cream, and no shortcuts.</p>
+        <div class="hero-cta">
+          <a href="menu.html" class="btn btn-primary">Order Now</a>
+          <a href="about.html" class="btn btn-outline">Our Story</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>12+</strong>
+            <span>Years Baking</span>
+          </div>
+          <div class="hero-stat">
+            <strong>24</strong>
+            <span>Daily Creations</span>
+          </div>
+          <div class="hero-stat">
+            <strong>15k+</strong>
+            <span>Happy Customers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="images/bakery 25.jpg" alt="Assorted fresh bakery items" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);">
+        </div>
+        <div class="hero-badge-float">
+          <span style="font-size:1.8rem;">⭐</span>
+          <div>
+            <strong style="display:block;font-family:var(--font-display);">4.9/5</strong>
+            <span style="font-size:0.78rem;color:var(--text-secondary);">2,300+ Reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="scallop-divider"></div>
+
+  <!-- ===================== CATEGORIES ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Explore</span>
+        <h2>Shop by Category</h2>
+        <p>From celebration cakes to everyday breads — find exactly what you're craving.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <a href="menu.html?category=Cakes" class="category-card reveal">
+          <div class="category-icon">🎂</div>
+          <h4>Cakes</h4>
+          <p style="font-size:0.85rem;">4 varieties</p>
+        </a>
+        <a href="menu.html?category=Pastries" class="category-card reveal reveal-delay-1">
+          <div class="category-icon">🥐</div>
+          <h4>Pastries</h4>
+          <p style="font-size:0.85rem;">4 varieties</p>
+        </a>
+        <a href="menu.html?category=Breads" class="category-card reveal reveal-delay-2">
+          <div class="category-icon">🍞</div>
+          <h4>Breads</h4>
+          <p style="font-size:0.85rem;">4 varieties</p>
+        </a>
+        <a href="menu.html?category=Cookies" class="category-card reveal reveal-delay-3">
+          <div class="category-icon">🍪</div>
+          <h4>Cookies</h4>
+          <p style="font-size:0.85rem;">4 varieties</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURED PRODUCTS ===================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Handpicked</span>
+        <h2>Featured Products</h2>
+        <p>A taste of our most-loved creations, baked fresh this morning.</p>
+      </div>
+
+      <!-- Products injected here by script.js (renderHomeProducts) -->
+      <div class="grid grid-4" id="featured-products"></div>
+    </div>
+  </section>
+
+  <!-- ===================== BEST SELLERS ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Customer Favorites</span>
+        <h2>Our Best Sellers</h2>
+        <p>The treats our customers keep coming back for, again and again.</p>
+      </div>
+
+      <div class="grid grid-4" id="best-sellers"></div>
+    </div>
+  </section>
+
+  <div class="scallop-divider flip"></div>
+
+  <!-- ===================== WHY CHOOSE US ===================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Our Promise</span>
+        <h2>Why Choose Golden Crumb</h2>
+      </div>
+
+      <div class="why-us-grid">
+        <div class="why-us-item reveal">
+          <div class="why-us-icon">🌾</div>
+          <h4>Premium Ingredients</h4>
+          <p>Only real butter, Belgian chocolate, and farm-fresh eggs — never substitutes.</p>
+        </div>
+        <div class="why-us-item reveal reveal-delay-1">
+          <div class="why-us-icon">👩‍🍳</div>
+          <h4>Master Bakers</h4>
+          <p>Recipes perfected over 12 years by our in-house pastry chefs.</p>
+        </div>
+        <div class="why-us-item reveal reveal-delay-2">
+          <div class="why-us-icon">🚚</div>
+          <h4>Fast Delivery</h4>
+          <p>Fresh from oven to doorstep — same-day delivery across the city.</p>
+        </div>
+        <div class="why-us-item reveal reveal-delay-3">
+          <div class="why-us-icon">💯</div>
+          <h4>Freshness Guarantee</h4>
+          <p>Baked daily in small batches — never frozen, never stale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Kind Words</span>
+        <h2>What Our Customers Say</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"The red velvet cake was the highlight of my daughter's birthday party. Moist, rich, and beautifully finished."</p>
+          <div class="testimonial-author">
+            <div class="avatar-circle"><img src="images/avatar-1.svg" alt="Customer avatar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+            <div>
+              <strong>Ayesha R.</strong>
+              <div style="font-size:0.8rem;color:var(--text-secondary);">Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"Their sourdough is genuinely better than what I had in Europe. The crust, the crumb — perfect every time."</p>
+          <div class="testimonial-author">
+            <div class="avatar-circle"><img src="images/avatar-2.svg" alt="Customer avatar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+            <div>
+              <strong>Hassan M.</strong>
+              <div style="font-size:0.8rem;color:var(--text-secondary);">Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"I order the croissants every single week. Consistent quality and the delivery is always right on time."</p>
+          <div class="testimonial-author">
+            <div class="avatar-circle"><img src="images/avatar-3.svg" alt="Customer avatar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+            <div>
+              <strong>Sara K.</strong>
+              <div style="font-size:0.8rem;color:var(--text-secondary);">Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="newsletter-section reveal">
+        <span class="eyebrow">Stay Sweet</span>
+        <h2>Get 10% Off Your First Order</h2>
+        <p>Subscribe for weekly bakery drops, seasonal specials, and exclusive discount codes.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">🥐 Golden Crumb</div>
+          <p>Handcrafted cakes, pastries, and breads baked fresh every day using traditional techniques and premium ingredients.</p>
+          <div class="footer-social">
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="Instagram">ig</a>
+            <a href="#" title="Twitter">tw</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>My Account</h4>
+          <ul>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="cart.html">My Cart</a></li>
+            <li><a href="orders.html">My Orders</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>📍 123 Bakery Street, Lahore</li>
+            <li>📞 +92 300 1234567</li>
+            <li>✉️ hello@goldencrumb.com</li>
+            <li>🕐 8:00 AM – 10:00 PM Daily</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Golden Crumb Bakery. All rights reserved. Built with love (and butter).
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== QUICK VIEW MODAL ===================== -->
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-box">
+      <button class="modal-close">✕</button>
+      <div class="modal-image"><!-- Quick View Product Image -->Quick View Product Image</div>
+      <div>
+        <span class="card-category modal-category"></span>
+        <h3 class="modal-title mt-sm"></h3>
+        <p class="modal-desc mt-sm"></p>
+        <div class="price-tag modal-price mt-md"></div>
+        <div class="flex mt-lg" style="gap:0.7rem;">
+          <button class="btn btn-primary modal-add-btn">Add to Cart</button>
+          <a href="#" class="btn btn-outline modal-view-link">View Full Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SCROLL TO TOP ===================== -->
+  <button class="scroll-top-btn" title="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
